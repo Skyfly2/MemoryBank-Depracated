@@ -1,0 +1,62 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="MemoryBank.Landing">
+    <StackLayout HeightRequest="1000" WidthRequest="1000" BackgroundColor="MediumPurple" VerticalOptions="Center" HorizontalOptions="Center" Padding="0,0,0,30">
+        <Button
+            Clicked="Register"
+            TextColor="Blue"
+            FontSize="20"
+            HorizontalOptions="End"
+            Text="Register"
+            Padding="0,50,20,0"
+            ></Button>
+        <Label
+            Text="MemoryBank"
+            FontSize="45"
+            Padding="0,170,0,30"
+            HorizontalOptions="Center"
+            TextColor="White"
+            >
+        </Label>
+        <Entry
+            Placeholder="Username"
+            Margin="30,0,30,15"
+            HorizontalOptions="Center"
+            IsPassword="False"
+            BackgroundColor="MediumPurple"
+            WidthRequest="300"
+            HeightRequest="60"
+            FontSize="24">
+        </Entry>
+        <Entry
+            Placeholder="Password"
+            Margin="30,0,30,15"
+            HorizontalOptions="Center"
+            IsPassword="True"
+            BackgroundColor="MediumPurple"
+            WidthRequest="300"
+            HeightRequest="60"
+            FontSize="24">
+        </Entry>
+        <Button
+            Clicked="Login"
+            HorizontalOptions="Center"
+            Margin="30,0,30,0"
+            BorderWidth="2"
+            BorderColor="Purple"
+            BackgroundColor="Purple"
+            WidthRequest="300"
+            TextColor="White"
+            Text="Login"
+            FontSize="24">
+        </Button>
+        <Button
+            Clicked="Reset_Pass"
+            Text="Forgot your password? Reset it here"
+            TextColor="Blue"
+            Margin="30,0,30,5"
+            >
+            
+        </Button>
+    </StackLayout>
+</ContentPage>
