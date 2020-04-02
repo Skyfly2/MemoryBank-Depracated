@@ -3,16 +3,16 @@ using Newtonsoft.Json;
 
 namespace MemoryBank
 {
-	public class Registration
+	public class LoginInfo
 	{
+		[JsonProperty(PropertyName = "id")]
+		public string Id { get; set; }
+
 		[JsonProperty(PropertyName = "Email")]
 		public string Email { get; set; }
 
 		[JsonProperty(PropertyName = "Pass")]
 		public string Pass { get; set; }
-
-        [JsonProperty(PropertyName = "ConfirmPass")]
-        public string CPass { get; set; }
 
 		[JsonProperty(PropertyName = "First")]
 		public string First { get; set; }
