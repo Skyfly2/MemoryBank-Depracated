@@ -8,11 +8,11 @@ namespace MemoryBank
 {
     public partial class Register : ContentPage
     {
-        DataManager manage;
+        LoginManager manage;
         public Register()
         {
             InitializeComponent();
-            manage = DataManager.Default;
+            manage = LoginManager.Default;
         }
 
         async void Back(System.Object sender, System.EventArgs e)
@@ -20,7 +20,7 @@ namespace MemoryBank
             await Navigation.PopModalAsync();
         }
 
-        void RegisterFunc(System.Object sender, System.EventArgs e)
+        async void RegisterFunc(System.Object sender, System.EventArgs e)
         {
             // Store user data
             var info = new LoginInfo { First = firstname.Text };
@@ -29,25 +29,45 @@ namespace MemoryBank
             info.Id = user.Text;
 
             // Field validation
-            if ((pass.Text == cpass.Text)){
-                if (!String.IsNullOrWhiteSpace(pass.Text) && !String.IsNullOrWhiteSpace(info.First) && !String.IsNullOrWhiteSpace(info.Email) && !String.IsNullOrWhiteSpace(info.Last) && !String.IsNullOrWhiteSpace(info.Id))
-                { 
-                    // Register the user
-                    Reg(info);
+            if (await manage.NoIdExists(info.Id))
+            {
+                if (pass.Text == cpass.Text)
+                {
+                    if (manage.PasswordRequirements(pass.Text))
+                    {
+                        if (!String.IsNullOrWhiteSpace(info.First) && !String.IsNullOrWhiteSpace(info.Email) && !String.IsNullOrWhiteSpace(info.Last) && !String.IsNullOrWhiteSpace(info.Id))
+                        {
+                            // Register the user
+                            Reg(info);
+                        }
+                        else
+                        {
+                            // Registration Error
+                            await DisplayAlert("Registration Error", "Please Fill Out All Fields", "Close");
+                        }
+                    }
+                    else
+                    {
+                        // Password Fails Security Requirements
+                        cpass.Text = "";
+                        pass.Text = "";
+                        await DisplayAlert("Registation Error", "Password must be between 8 and 40 characters and contain an uppercase and lowercase letter, a number, and a special character", "Close");
+                    }
                 }
                 else
                 {
-                    // Registration Error
-                    DisplayAlert("Registration Error", "Please Fill Out All Fields", "Close");
+                    // Password Mismatch Error
+                    cpass.Text = "";
+                    pass.Text = "";
+                    await DisplayAlert("Registration Error", "Passwords Do Not Match", "Close");
+
                 }
             }
             else
             {
-                // Password Mismatch Error
-                cpass.Text = "";
-                pass.Text = "";
-                DisplayAlert("Registration Error", "Passwords Do Not Match", "Close");
-                
+                // Username already exists
+                user.Text = "";
+                await DisplayAlert("Registration Error", "Username Taken", "Close");
             }
 
         }
