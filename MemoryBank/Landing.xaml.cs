@@ -28,7 +28,7 @@ namespace MemoryBank
             
             if (await manage.Login(info))
             {
-                await DisplayAlert("Success", "You Logged In!", "Yeet");
+                await Navigation.PushModalAsync(new HomePage());
                 
             }
             else

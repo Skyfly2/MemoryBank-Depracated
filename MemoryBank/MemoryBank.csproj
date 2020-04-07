@@ -15,4 +15,15 @@
     <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
     <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.10.1" />
   </ItemGroup>
+  <ItemGroup>
+    <None Remove="settings.png" />
+    <None Remove="photos\settings.png" />
+    <None Remove="images\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="images\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="images\settings.png" />
+  </ItemGroup>
 </Project>

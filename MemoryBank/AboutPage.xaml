@@ -1,0 +1,85 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MemoryBank.AboutPage"
+    BackgroundColor="White"
+    xmlns:local="clr-namespace:MemoryBank"
+    >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid
+            BackgroundColor="White"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="1"/>
+            </Grid.RowDefinitions>
+            <Label
+                Text="About MemoryBank"
+                TextColor="MediumPurple"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="18"
+                Grid.Column="1"
+                Grid.Row="1"
+                Grid.ColumnSpan="1"
+                />
+            <BoxView
+                BackgroundColor="MediumPurple"
+                Grid.Row="2"
+                Grid.ColumnSpan="3"
+                />
+            
+
+        </Grid>
+        <Label
+            TextColor="Gray"
+            FontSize="14"
+            Grid.Row="1"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="4"
+            Padding="20,20,20,0"
+            Text="MemoryBank is an app designed from the ground up to securely store any and all information that is pertinent for you to access.
+            Anything uploaded to MemoryBank is encrypted, so nobody has access to your information but you."
+            />
+        
+        <Frame
+            BackgroundColor="White"
+            BorderColor="MediumPurple"
+            HasShadow="False"
+            CornerRadius="0"
+            Grid.Column="0"
+            Grid.Row="5"
+            Grid.ColumnSpan="4">
+            <Button
+                Text="Close"
+                TextColor="MediumPurple"
+                FontSize="25"
+                Grid.Column="0"
+                Clicked="Close"
+                />
+        </Frame>
+    </Grid>
+</ContentPage>

@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MemoryBank.HomePage"
+    BackgroundColor="White"
+    xmlns:local="clr-namespace:MemoryBank"
+    >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="90"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid
+            BackgroundColor="MediumPurple"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ImageButton
+                Source="{local:ImageResource MemoryBank.images.settings.png}"
+                Grid.Column="0"
+                Clicked="Settings_Clicked"
+                Grid.Row="1"
+                Padding="0,0,20,10"
+                />
+            <Label
+                Text="MemoryBank"
+                TextColor="White"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Column="1"
+                Grid.Row="1"
+                Padding="0,0,0,10"
+                />
+            
+
+        </Grid>
+        <Label
+            Text=""
+            x:Name="greet"
+            FontSize="44"
+            TextColor="Gray"
+            Grid.Row="1"
+            Grid.ColumnSpan="4"
+            Padding="20,20,0,0"
+                />
+        <Label
+            Text="What would you like to do?"
+            FontSize="40"
+            TextColor="Gray"
+            Grid.Row="2"
+            Grid.ColumnSpan="4"
+            Padding="20,20,0,0"
+                />
+        <Grid
+            BackgroundColor="White"
+            Padding="0,0,0,25"
+            Grid.Row="3"
+            Grid.Column="0"
+            Grid.RowSpan="2"
+            Grid.ColumnSpan="4">
+            
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="3"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="40"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="3"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <BoxView
+                BackgroundColor="MediumPurple"
+                Grid.Row="1"
+                Grid.Column="1"
+                Grid.ColumnSpan="3"
+                />
+            <BoxView
+                BackgroundColor="MediumPurple"
+                Grid.Column="2"
+                Grid.RowSpan="3"
+                />
+            <Button
+                Text="Search"
+                Grid.Row="0"
+                Grid.Column="1"
+                FontSize="35"
+                TextColor="Purple"
+                Clicked="Search"
+                />
+            <Button
+                Text="Personal Info"
+                Grid.Row="2"
+                Grid.Column="1"
+                FontSize="35"
+                TextColor="Purple"
+                Clicked="Personal_Info"
+                />
+            <Button
+                Text="Passwords"
+                Grid.Row="0"
+                Grid.Column="3"
+                FontSize="35"
+                TextColor="Purple"
+                Clicked="Passwords"
+                />
+            <Button
+                Text="Notes"
+                Grid.Row="2"
+                Grid.Column="3"
+                FontSize="35"
+                TextColor="Purple"
+                Clicked="Notes"
+                />
+
+        </Grid>
+        <Frame
+            BackgroundColor="White"
+            BorderColor="MediumPurple"
+            HasShadow="False"
+            CornerRadius="0"
+            Grid.Column="0"
+            Grid.Row="5"
+            Grid.ColumnSpan="4">
+            <Button Text="About Memory Bank" TextColor="MediumPurple" FontSize="25" Grid.Column="0" Clicked="About"/>
+        </Frame>
+    </Grid>
+</ContentPage>
