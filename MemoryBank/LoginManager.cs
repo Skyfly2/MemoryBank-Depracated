@@ -22,6 +22,8 @@ namespace MemoryBank
 
         private DocumentClient client;
 
+        
+
         private LoginManager()
         {
             client = new DocumentClient(new System.Uri(accountURL), pKey);
@@ -73,7 +75,8 @@ namespace MemoryBank
                         return false;
                     }
                 }
-                // Successful login
+                // Successful login, set app session
+                Account.SetSession(real.Id, real.First, real.Last, real.Email);
                 return true;
             }
             catch (Exception e)
