@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MemoryBank.PersonalPage"
+    BackgroundColor="White"
+    xmlns:local="clr-namespace:MemoryBank"
+    >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="95"/>
+            <RowDefinition Height="60"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid
+            BackgroundColor="MediumPurple"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ImageButton
+                Source="{local:ImageResource MemoryBank.images.settings.png}"
+                Grid.Column="0"
+                
+                Grid.Row="1"
+                Margin="0,0,30,15"
+                />
+            <Label
+                Text="Personal Info"
+                TextColor="White"
+                FontSize="22"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Column="1"
+                Grid.Row="1"
+                Margin="0,0,0,10"
+                />
+            <Button
+                Text="+"
+                TextColor="White"
+                Grid.Column="2"
+                Grid.Row="1"
+                FontSize="50"
+                Margin="35,0,0,10"
+                Clicked="NewPersonalInfo"
+                />
+            
+
+        </Grid>
+        <ScrollView
+            Grid.Row="1"
+            Grid.ColumnSpan="4"
+            Grid.RowSpan="5">
+            <StackLayout>    
+                <Frame
+                    Margin="20,20,20,0"
+                    HeightRequest="95"
+                    Grid.Row="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="10"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Text="Name: ?"
+                            Grid.Row="0"
+                            Grid.ColumnSpan="2"
+                            x:Name="name"
+                            TextColor="Gray"/>
+                        <Label
+                            Text="Phone #: ?"
+                            Grid.Row="0"
+                            Grid.Column="2"
+                            Grid.ColumnSpan="2"
+                            x:Name="phone"
+                            TextColor="Gray"/>
+                        <Label
+                            Text="Birthday: ?"
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2"
+                            x:Name="birthday"
+                            TextColor="Gray"
+                            Margin="0,5,0,0"/>
+                        <Label
+                            Text="Email: ?"
+                            Grid.Row="1"
+                            Grid.Column="2"
+                            Grid.ColumnSpan="2"
+                            x:Name="email"
+                            TextColor="Gray"
+                            Margin="0,5,0,0"/>
+                        <BoxView
+                            BackgroundColor="Gray"
+                            Grid.Row="2"
+                            Grid.ColumnSpan="4"
+                            Margin="0,9,0,0"
+                            />
+                        <Button
+                            Text="Update"
+                            TextColor="MediumPurple"
+                            Grid.Row="3"
+                            Grid.ColumnSpan="4"
+                            FontSize="20"
+                            Margin="0,15,0,0"
+                            Clicked="UpdateData"
+                            />
+                    </Grid>
+                </Frame>
+                <Frame
+                    Margin="20,20,20,0"
+                    HeightRequest="95"
+                    Grid.Row="0">
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                            <RowDefinition Height="30"/>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="1"/>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <Label
+                            Text="Social Security Number: *********"
+                            Grid.Row="0"
+                            Grid.ColumnSpan="5"
+                            x:Name="ssn"
+                            TextColor="Gray"
+                            FontSize="16"
+                            />
+                        <BoxView
+                            BackgroundColor="Gray"
+                            Grid.Row="1"
+                            Grid.ColumnSpan="5"
+                            Margin="0,29,0,0"
+                            />
+                        <Button
+                            Text="Edit"
+                            TextColor="MediumPurple"
+                            Grid.Row="2"
+                            Grid.ColumnSpan="2"
+                            FontSize="18"
+                            Margin="0,7,0,0"
+                            Clicked="EditSSN"
+                            />
+                        <Button
+                            Text="View"
+                            TextColor="MediumPurple"
+                            Grid.Row="2"
+                            Grid.Column="3"
+                            Grid.ColumnSpan="2"
+                            FontSize="18"
+                            Margin="0,7,0,0"
+                            Clicked="ViewSSN"
+                            />
+                        <BoxView
+                            BackgroundColor="Gray"
+                            Grid.Row="2"
+                            Grid.Column="2"
+                            Margin="0,5,0,0"
+                            />
+                    </Grid>
+                </Frame>
+            </StackLayout>
+
+        </ScrollView>
+    </Grid>
+</ContentPage>
