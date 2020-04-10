@@ -8,7 +8,7 @@
     >
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="90"/>
+            <RowDefinition Height="95"/>
             <RowDefinition Height="60"/>
             <RowDefinition Height="150"/>
             <RowDefinition Height="*"/>
@@ -40,11 +40,12 @@
                 Grid.Column="0"
                 Clicked="Settings_Clicked"
                 Grid.Row="1"
-                Padding="0,0,20,10"
+                Padding="0,0,30,15"
                 />
             <Label
                 Text="MemoryBank"
                 TextColor="White"
+                FontSize="22"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Grid.Column="1"
@@ -91,7 +92,7 @@
                 <RowDefinition Height="3"/>
                 <RowDefinition Height="*"/>
             </Grid.RowDefinitions>
-            <BoxView
+            <!--<BoxView
                 BackgroundColor="MediumPurple"
                 Grid.Row="1"
                 Grid.Column="1"
@@ -101,7 +102,7 @@
                 BackgroundColor="MediumPurple"
                 Grid.Column="2"
                 Grid.RowSpan="3"
-                />
+                />-->
             <Button
                 Text="Search"
                 Grid.Row="0"

@@ -36,8 +36,9 @@ namespace MemoryBank
         {
         }
 
-        void Notes(System.Object sender, System.EventArgs e)
+        async void Notes(System.Object sender, System.EventArgs e)
         {
+            await Navigation.PushModalAsync(new MenuPage());
         }
     }
 }

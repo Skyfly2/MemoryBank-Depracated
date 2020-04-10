@@ -10,9 +10,7 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="90"/>
             <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            
             <RowDefinition Height="90"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
@@ -60,12 +58,12 @@
             Grid.Row="1"
             Grid.ColumnSpan="4"
             Grid.RowSpan="4"
-            Padding="20,20,20,0"
-            Text="MemoryBank is an app designed from the ground up to securely store any and all information that is pertinent for you to access.
-            Anything uploaded to MemoryBank is encrypted, so nobody has access to your information but you."
+            Padding="20,0,20,0"
+            Text="MemoryBank is an app designed from the ground up to securely store any and all information that is pertinent for you to access. Anything uploaded to MemoryBank is encrypted, so nobody has access to your information but you.MemoryBank is an app designed from the ground up to securely store any and all information that is pertinent for you to access. Anything uploaded to MemoryBank is encrypted, so nobody has access to your information but you."
             />
         
         <Frame
+            Margin="0,80,0,0"
             BackgroundColor="White"
             BorderColor="MediumPurple"
             HasShadow="False"
