@@ -26,4 +26,21 @@
   <ItemGroup>
     <EmbeddedResource Include="images\settings.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="contentpages\NotesPage.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="NotesPage.xaml.cs">
+      <DependentUpon>NotesPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="PasswordsPage.xaml.cs">
+      <DependentUpon>PasswordsPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="PersonalPage.xaml.cs">
+      <DependentUpon>PersonalPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="SearchPage.xaml.cs">
+      <DependentUpon>SearchPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
 </Project>

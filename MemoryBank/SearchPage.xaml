@@ -1,0 +1,120 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MemoryBank.SearchPage"
+    BackgroundColor="White"
+    xmlns:local="clr-namespace:MemoryBank"
+    >
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="95"/>
+            <RowDefinition Height="65"/>
+            <RowDefinition Height="150"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="90"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid
+            BackgroundColor="MediumPurple"
+            Grid.Row="0"
+            Grid.Column="0"
+            Grid.ColumnSpan="4">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="35"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <ImageButton
+                Source="{local:ImageResource MemoryBank.images.settings.png}"
+                Grid.Column="0"
+                Grid.Row="1"
+                Padding="0,0,30,15"
+                />
+            <Label
+                Text="Search"
+                TextColor="White"
+                FontSize="22"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Grid.Column="1"
+                Grid.Row="1"
+                Padding="0,0,0,10"
+                />
+        </Grid>
+        <Entry
+            Grid.Row="1"
+            Grid.ColumnSpan="3"
+            Placeholder="Notes, Passwords, Personal Info, etc."
+            Margin="10,20,0,0"
+            />
+        <Button
+            Text="Go"
+            TextColor="MediumPurple"
+            Grid.Row="1"
+            Grid.Column="3"
+            FontSize="25"
+            Clicked="Search"
+            Margin="0,20,0,0"
+            />
+        <ScrollView
+            Grid.Row="2"
+            Grid.RowSpan="4"
+            Grid.ColumnSpan="4"
+            >
+            <StackLayout>
+                <Frame
+                        Margin="20,20,20,0"
+                        HeightRequest="95"
+                        >
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="30"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+                            <Label
+                                Text="Content"
+                                Grid.Row="0"
+                                Grid.ColumnSpan="3"
+                                x:Name="content"
+                                TextColor="Gray"
+                                FontSize="20"
+                                />
+                            <BoxView
+                                BackgroundColor="Gray"
+                                Grid.Row="1"
+                                Grid.ColumnSpan="3"
+                                Margin="0,29,0,0"
+                                />
+                            <Button
+                                Text="View"
+                                TextColor="MediumPurple"
+                                Grid.Row="2"
+                                Grid.ColumnSpan="3"
+                                FontSize="18"
+                                Margin="0,7,0,0"
+                                Clicked="ViewContent"
+                                />
+                        </Grid>
+                    </Frame>
+                </StackLayout>
+        </ScrollView>
+        
+    </Grid>
+</ContentPage>
