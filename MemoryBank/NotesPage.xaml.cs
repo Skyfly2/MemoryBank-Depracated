@@ -15,5 +15,10 @@ namespace MemoryBank
         void NewDocument(System.Object sender, System.EventArgs e)
         {
         }
+
+        async void Settings_Clicked(System.Object sender, System.EventArgs e)
+        {
+            await Navigation.PushModalAsync(new SettingsPage());
+        }
     }
 }

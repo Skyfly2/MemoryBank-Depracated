@@ -40,6 +40,7 @@
                 Grid.Column="0"
                 Grid.Row="1"
                 Padding="0,0,30,15"
+                Clicked="Settings_Clicked"
                 />
             <Label
                 Text="Search"
