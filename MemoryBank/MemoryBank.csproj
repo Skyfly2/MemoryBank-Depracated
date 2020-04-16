@@ -14,6 +14,7 @@
     <PackageReference Include="Xamarin.Forms" Version="4.5.0.495" />
     <PackageReference Include="Xamarin.Essentials" Version="1.5.1" />
     <PackageReference Include="Microsoft.Azure.DocumentDB.Core" Version="2.10.1" />
+    <PackageReference Include="sqlite-net-pcl" Version="1.6.292" />
   </ItemGroup>
   <ItemGroup>
     <None Remove="settings.png" />
