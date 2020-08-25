@@ -20,6 +20,7 @@
     <None Remove="settings.png" />
     <None Remove="photos\settings.png" />
     <None Remove="images\settings.png" />
+    <None Remove="KeyDatabase.db.sqbpro" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="images\" />

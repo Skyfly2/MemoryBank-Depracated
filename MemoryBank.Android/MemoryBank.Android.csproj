@@ -57,6 +57,9 @@
     <PackageReference Include="Microsoft.Azure.DocumentDB.Core">
       <Version>2.10.1</Version>
     </PackageReference>
+    <PackageReference Include="SQLite.Net-PCL">
+      <Version>3.1.1</Version>
+    </PackageReference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="MainActivity.cs" />
@@ -94,6 +97,9 @@
       <Project>{B2235AF0-0D36-4210-8309-DADDB8FAB9F2}</Project>
       <Name>MemoryBank</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="Assets\KeyDatabase.db" />
   </ItemGroup>
  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>
